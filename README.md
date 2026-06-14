@@ -82,3 +82,11 @@ This repository is licensed under the MIT Licence. See `LICENSE` for details.
 CariSurg MedTech Pathways Scholar
 Clinical AI & Innovation Unit — Mercer General Hospital
 Programme: CariSurg Healthcare AI Programme, Cohort 2026
+
+
+## Project Status
+
+Current progress:
+- Week 0 exploratory analysis completed.
+- Repository structure established.
+- Documentation and reference management workflows being implemented.
