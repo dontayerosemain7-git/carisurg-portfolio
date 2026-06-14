@@ -82,3 +82,9 @@ This repository is licensed under the MIT Licence. See `LICENSE` for details.
 CariSurg MedTech Pathways Scholar
 Clinical AI & Innovation Unit — Mercer General Hospital
 Programme: CariSurg Healthcare AI Programme, Cohort 2026
+
+# Data Directory
+
+This folder contains information about datasets used in the CariSurg Healthcare AI project.
+
+Raw clinical datasets are not stored in this public repository due to privacy and data governance requirements.
