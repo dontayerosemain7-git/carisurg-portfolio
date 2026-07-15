@@ -49,6 +49,49 @@ sustained adoption requires.
 
 ---
 
+## Reproducibility
+
+**Random seed: 42**
+
+All model training, train/test splits, and figures in this repository use `RANDOM_SEED = 42`.
+Every result in the notebooks and accompanying reports was generated from a single execution
+of the relevant notebook with this seed. No figures were generated separately from the
+reported metrics.
+
+---
+
+## Week 5 — Dataset Feasibility Analysis
+
+**Dataset:** Yale EMMLC ED Triage & Admission Prediction (Hong et al., 2018, PLOS ONE)
+**Size:** 55,121 adult ED visits | 226 features | 3 hospital sites | No missing values
+
+**Verdict:** Proceed with caveats. Caveats: class imbalance at ESI 1 (n=77), US-origin
+distribution shift risk for Caribbean deployment, and demographic proxies requiring equity
+testing before deployment.
+
+---
+
+## Week 6 — Baseline Models
+
+**Models:** Logistic Regression + Decision Tree (max_depth=8)
+**Random seed:** 42
+**Train/test split:** 80/20 stratified on ESI
+
+| Model | Accuracy | ESI 1 Recall | Macro F1 |
+|-------|----------|--------------|----------|
+| Dummy (stratified random) | 0.3754 | 0.1250 | 0.1380 |
+| Logistic Regression | **0.5077** | **0.6250** | 0.3742 |
+| Decision Tree (depth=8) | 0.4060 | 0.1875 | 0.2822 |
+
+**Primary metric:** ESI 1 Recall — measures whether the model correctly identifies patients
+in immediate danger. Overall accuracy is misleading on an imbalanced five-class dataset where
+ESI 3 accounts for 49% of visits.
+
+**Most worrying failure mode:** The logistic regression missed 6 of 16 ESI 1 patients in
+the test set (37.5% miss rate). Any deployment must include mandatory clinical override
+protocols and human-in-the-loop review.
+---
+
 ## How To Run The Notebook
 
 1. Open [Google Colab](https://colab.research.google.com)
