@@ -90,6 +90,7 @@ ESI 3 accounts for 49% of visits.
 **Most worrying failure mode:** The logistic regression missed 6 of 16 ESI 1 patients in
 the test set (37.5% miss rate). Any deployment must include mandatory clinical override
 protocols and human-in-the-loop review.
+
 ---
 
 # Week 7 – Model Optimisation & Trade-offs
