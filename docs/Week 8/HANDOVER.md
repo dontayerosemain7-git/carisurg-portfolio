@@ -1,7 +1,7 @@
 # HANDOVER DOCUMENT
 ## AI-Assisted ED Triage — Mercer General Hospital
 
-**Prepared by:** Dontaye Rosemain, CarISurg MedTech Pathways Cohort 2026  
+**Prepared by:** Dontaye Rosemain, CariSurg MedTech Pathways Cohort 2026  
 **Date:** 2026-07-25  
 **Status:** Draft — Week 8 Interim Outline  
 
