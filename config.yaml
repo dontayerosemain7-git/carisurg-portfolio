@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+# AI-Assisted Emergency Department Triage
+# Week 8 - Reproducibility & Modular Project Design
+# -----------------------------------------------------------------------------
+
+project:
+  name: AI-Assisted ED Triage
+  author: Dontaye Rosemain
+  version: "1.0"
+
+seed: 42
+
+data:
+  path: data/yaleemmlc_admissionprediction_triage.csv
+  target: esi
+
+split:
+  test_size: 0.20
+  stratify: true
+
+model:
+  name: LogisticRegression
+
+hyperparameters:
+  max_iter: 1000
+  solver: lbfgs
+  class_weight: balanced
+  random_state: 42
+
+output:
+  save_confusion_matrix: true
+  confusion_matrix_path: docs/confusion_matrix.png
